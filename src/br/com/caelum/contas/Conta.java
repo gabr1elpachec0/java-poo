@@ -7,14 +7,14 @@ public class Conta {
     private double saldo;
     //private String dataDeAbertura;
 
-    private Data dataDeAbertura;
+    //private Data dataDeAbertura;
 
-    public Conta(String titular, String agencia, int numero, double saldo, Data dataDeAbertura) {
+    public Conta(String titular, String agencia, int numero, double saldo) {
         this.titular = titular;
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = saldo;
-        this.dataDeAbertura = dataDeAbertura;
+        //this.dataDeAbertura = dataDeAbertura;
     }
 
     // Getters e Setters
@@ -50,13 +50,14 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public String getDataDeAbertura() {
+    /*public String getDataDeAbertura() {
         return dataDeAbertura.dia + "/" + dataDeAbertura.mes + "/" + dataDeAbertura.ano;
     }
 
     public void setDataDeAbertura(Data dataDeAbertura) {
         this.dataDeAbertura = dataDeAbertura;
     }
+    */
 
     // Métodos de Funcionalidade
     public boolean saque(double valor) {
@@ -87,8 +88,13 @@ public class Conta {
     public String recuperarDadosParaImpressao() {
         String dados = "Titular: " + this.titular + "\n" +
                 "Número da Conta: " + this.numero + "\n" +
-                "Saldo: " + this.saldo + "\n" +
-                "Data de Abertura: " + this.dataDeAbertura.dia + "/" + this.dataDeAbertura.mes + "/" + this.dataDeAbertura.ano + "\n";
+                "Saldo: " + this.saldo + "\n";
         return dados;
     }
+
+    public String getTipo() {
+        return "Conta";
+    }
+    // "Data de Abertura: " + this.dataDeAbertura.dia + "/" + this.dataDeAbertura.mes + "/" + this.dataDeAbertura.ano + "\n";
+
 }

@@ -5,11 +5,13 @@ import br.com.caelum.contas.Data;
 
 public class Teste {
     public static void main(String[] args) {
+        /*
         Data dataC1 = new Data(12, 03, 2024);
         Data dataC2 = new Data(01, 12, 2023);
+        */
 
-        Conta c1 = new Conta("Gabriel", "0321", 3213, 1500, dataC1);
-        Conta c2 = new Conta("Luis", "2313", 4354, 10000, dataC2);
+        Conta c1 = new Conta("Gabriel", 0321, 3213, 1500);
+        Conta c2 = new Conta("Luis", 2313, 4354, 10000);
 
         c1.deposito(20000.00);
         c1.saque(500);
