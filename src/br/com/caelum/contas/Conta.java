@@ -1,4 +1,4 @@
-package orientacao_objetos_basica;
+package br.com.caelum.contas;
 
 public class Conta {
     private String titular;

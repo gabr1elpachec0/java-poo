@@ -1,7 +1,7 @@
-package orientacao_objetos_basica.testes;
+package br.com.caelum.contas.testes;
 
-import orientacao_objetos_basica.Conta;
-import orientacao_objetos_basica.Data;
+import br.com.caelum.contas.Conta;
+import br.com.caelum.contas.Data;
 
 public class Teste {
     public static void main(String[] args) {

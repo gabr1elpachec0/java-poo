@@ -1,4 +1,4 @@
-package tipos_primitivos;
+package br.com.caelum.tiposPrimitivos;
 
 public class Exercicio1 {
     public static void main (String[] args) {
