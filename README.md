@@ -2,9 +2,9 @@
   Apostila de Java e Orientação a Objetos
 </h2>
 
-<p>
+<h3>
   🗒️ Tópicos
-</p>
+</h3>
 
 - ``TIPOS PRIMITIVOS``
 - ``CONTROLE DE FLUXO``
