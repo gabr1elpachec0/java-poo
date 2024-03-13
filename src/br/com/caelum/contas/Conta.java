@@ -1,5 +1,7 @@
 package br.com.caelum.contas;
 
+import br.com.caelum.contas.exceptions.SaldoInsuficienteException;
+
 public abstract class Conta {
     private String titular;
     private String agencia;
@@ -50,25 +52,27 @@ public abstract class Conta {
     }
 
     // Métodos de Funcionalidade
-    public boolean saque(double valor) {
+    public void saque(double valor) {
         if (this.saldo < valor) {
-            return false;
+            throw new SaldoInsuficienteException("Saldo insuficiente, tente um valor menor");
+        } else if (valor < 0) {
+            throw new IllegalArgumentException("Valor negativo informado, tente novamente");
         } else {
             this.saldo -= valor;
-            return true;
+            System.out.println("Saque realizado com sucesso");
         }
     }
 
     public void deposito(double valor) {
-        this.saldo += valor;
+        if (valor < 0) {
+            throw new IllegalArgumentException("Valor negativo informado, tente novamente");
+        } else {
+            this.saldo += valor;
+        }
     }
 
     public void transferencia(Conta destino, double valor) {
-        if (this.saque(valor)) {
-            destino.deposito(valor);
-        } else {
-            System.out.println("Transferência não realizada: Saldo insuficiente.");
-        }
+        destino.deposito(valor);
     }
 
     public double calculaRendimento() {
