@@ -2,6 +2,8 @@ package br.com.caelum.contas.testes;
 
 import br.com.caelum.contas.Conta;
 import br.com.caelum.contas.Data;
+import br.com.caelum.contas.modelo.ContaCorrente;
+import br.com.caelum.contas.modelo.ContaPoupanca;
 
 public class Teste {
     public static void main(String[] args) {
@@ -10,15 +12,14 @@ public class Teste {
         Data dataC2 = new Data(01, 12, 2023);
         */
 
-        Conta c1 = new Conta("Gabriel", 0321, 3213, 1500);
-        Conta c2 = new Conta("Luis", 2313, 4354, 10000);
+
+        Conta c1 = new ContaCorrente("Gabriel", "0321", 3213, 1500);
 
         c1.deposito(20000.00);
         c1.saque(500);
-        c1.transferencia(c2, 5000);
 
-        //System.out.println(c1.getDataDeAbertura());
-        System.out.println(c2.recuperarDadosParaImpressao());
+        System.out.println(c1.getTipo());
+
 
         //c2 = c1;
 

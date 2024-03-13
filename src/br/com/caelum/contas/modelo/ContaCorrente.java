@@ -7,7 +7,6 @@ public class ContaCorrente extends Conta {
         super(titular, agencia, numero, saldo);
     }
 
-    @Override
     public String getTipo() {
         return "Conta Corrente";
     }

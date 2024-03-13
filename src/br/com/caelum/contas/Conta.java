@@ -1,11 +1,10 @@
 package br.com.caelum.contas;
 
-public class Conta {
+public abstract class Conta {
     private String titular;
     private String agencia;
     private int numero;
     private double saldo;
-    //private String dataDeAbertura;
 
     //private Data dataDeAbertura;
 
@@ -50,15 +49,6 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    /*public String getDataDeAbertura() {
-        return dataDeAbertura.dia + "/" + dataDeAbertura.mes + "/" + dataDeAbertura.ano;
-    }
-
-    public void setDataDeAbertura(Data dataDeAbertura) {
-        this.dataDeAbertura = dataDeAbertura;
-    }
-    */
-
     // Métodos de Funcionalidade
     public boolean saque(double valor) {
         if (this.saldo < valor) {
@@ -92,9 +82,7 @@ public class Conta {
         return dados;
     }
 
-    public String getTipo() {
-        return "Conta";
-    }
+    public abstract String getTipo();
     // "Data de Abertura: " + this.dataDeAbertura.dia + "/" + this.dataDeAbertura.mes + "/" + this.dataDeAbertura.ano + "\n";
 
 }

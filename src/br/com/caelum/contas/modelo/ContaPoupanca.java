@@ -7,7 +7,6 @@ public class ContaPoupanca extends Conta {
         super(titular, agencia, numero, saldo);
     }
 
-    @Override
     public String getTipo() {
         return "Conta Poupança";
     }
